@@ -20,6 +20,9 @@ jobs:
 
     - name: Install Gradle
       uses: gradle/actions/setup-gradle@v3
+      with:
+        cache-read-only: true
+        cache-disabled: true
 
     - name: Build Debug APK
       run: gradle :app:assembleDebug
